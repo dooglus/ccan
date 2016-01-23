@@ -85,7 +85,8 @@ subvalues?
 
 Once it knows the value for index 1, it can derive the value for index
 0 by flipping bit 0 of the value and hashing it.  In effect, it can
-always derive a value for any index where it only needs to clear bits.
+always derive a value for any index where it only needs to clear bits
+which are less significant than the least significant cleared bit.
 
 So, index 1 gives index 0, but index 2 doesn't yield index 1.  When
 index 3 comes along, it yields 2, 1, and 0.
